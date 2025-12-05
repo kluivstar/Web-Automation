@@ -1,6 +1,10 @@
 // use playwright test runner - creates a browser and a page for us
 import { test, expect, chromium } from "@playwright/test";
 
+
+// Hooks are special Playwright functions that run before or after your tests.
+//They help you avoid repeating code (like login, setup, cleanup).
+
 // Performs login before each test
 test.beforeEach(async ({ page }) => {
   await page.goto("https://saucedemo.com/");
